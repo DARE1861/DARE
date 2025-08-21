@@ -1,0 +1,196 @@
+{
+  "detector": {
+    "detected_exceeded": false,
+    "actual_err": 0.002098560333251953,
+    "predicted_bound": 0.0039472452132031325,
+    "elapsed_sec": 2.2820727825164795
+  },
+  "analyzer_report": {
+    "component_estimates": {
+      "input_storage_error": 0.002098560333251953,
+      "affine_params_error": 0.002098560333251953,
+      "statistics_computation_error": 0.002098560333251953,
+      "output_storage_error": 0.0030202865600585938
+    },
+    "component_ratios": {
+      "input_storage_error": 0.22526488201873368,
+      "affine_params_error": 0.22526488201873368,
+      "statistics_computation_error": 0.22526488201873368,
+      "output_storage_error": 0.32420535394379896
+    },
+    "primary_source": "statistics",
+    "suggestion": "\u4e3b\u8981\u8bef\u5dee\u6765\u6e90\u4e3a\u7edf\u8ba1\u91cf\u8ba1\u7b97\u7cbe\u5ea6\u3002\u5efa\u8bae\uff1a\u589e\u5927batch size\u3001\u4f7f\u7528\u66f4\u7a33\u5b9a\u7684\u7edf\u8ba1\u7b97\u6cd5\u6216\u8003\u8651LayerNorm\u66ff\u4ee3\u3002 31.2%\u7684\u901a\u9053\u65b9\u5dee\u63a5\u8fd1eps\uff0c\u5b58\u5728\u6570\u503c\u4e0d\u7a33\u5b9a\u98ce\u9669\u3002\u8003\u8651\u589e\u5927eps\u503c\u6216\u68c0\u67e5\u8f93\u5165\u6570\u636e\u9884\u5904\u7406\u3002",
+    "batch_statistics": {
+      "batch_size": 4,
+      "num_channels": 32,
+      "spatial_size": [
+        16,
+        16
+      ],
+      "input_range": {
+        "min": -0.03929679095745087,
+        "max": 0.04187268763780594,
+        "mean": -3.9594433474121615e-06,
+        "std": 0.009925137273967266
+      }
+    },
+    "numerical_feature_stats": {
+      "near_zero_variance": 10,
+      "extreme_values": 0,
+      "small_batch": 0,
+      "high_variance": 0
+    },
+    "channel_analysis_summary": [
+      {
+        "channel_index": 16,
+        "channel_error": 0.00022544251987710595,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 22,
+        "channel_error": 0.0002090104389935732,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 14,
+        "channel_error": 0.00019885830988641828,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 20,
+        "channel_error": 0.00019736441026907414,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 21,
+        "channel_error": 0.0001972181926248595,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 10,
+        "channel_error": 0.0001905810204334557,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 3,
+        "channel_error": 0.00019022711785510182,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 5,
+        "channel_error": 0.00018709295545704663,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 7,
+        "channel_error": 0.00018705381080508232,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 31,
+        "channel_error": 0.000187046971404925,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      }
+    ]
+  }
+}

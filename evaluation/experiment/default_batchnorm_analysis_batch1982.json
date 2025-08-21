@@ -1,0 +1,196 @@
+{
+  "detector": {
+    "detected_exceeded": false,
+    "actual_err": 0.002258777618408203,
+    "predicted_bound": 0.004416011925786734,
+    "elapsed_sec": 2.446432113647461
+  },
+  "analyzer_report": {
+    "component_estimates": {
+      "input_storage_error": 0.002258777618408203,
+      "affine_params_error": 0.002258777618408203,
+      "statistics_computation_error": 0.002258777618408203,
+      "output_storage_error": 0.003297090530395508
+    },
+    "component_ratios": {
+      "input_storage_error": 0.2242313791389553,
+      "affine_params_error": 0.2242313791389553,
+      "statistics_computation_error": 0.2242313791389553,
+      "output_storage_error": 0.3273058625831341
+    },
+    "primary_source": "statistics",
+    "suggestion": "\u4e3b\u8981\u8bef\u5dee\u6765\u6e90\u4e3a\u7edf\u8ba1\u91cf\u8ba1\u7b97\u7cbe\u5ea6\u3002\u5efa\u8bae\uff1a\u589e\u5927batch size\u3001\u4f7f\u7528\u66f4\u7a33\u5b9a\u7684\u7edf\u8ba1\u7b97\u6cd5\u6216\u8003\u8651LayerNorm\u66ff\u4ee3\u3002 31.2%\u7684\u901a\u9053\u65b9\u5dee\u63a5\u8fd1eps\uff0c\u5b58\u5728\u6570\u503c\u4e0d\u7a33\u5b9a\u98ce\u9669\u3002\u8003\u8651\u589e\u5927eps\u503c\u6216\u68c0\u67e5\u8f93\u5165\u6570\u636e\u9884\u5904\u7406\u3002",
+    "batch_statistics": {
+      "batch_size": 4,
+      "num_channels": 32,
+      "spatial_size": [
+        16,
+        16
+      ],
+      "input_range": {
+        "min": -0.04181089252233505,
+        "max": 0.03911158815026283,
+        "mean": -5.3244100854499266e-05,
+        "std": 0.009976866655051708
+      }
+    },
+    "numerical_feature_stats": {
+      "near_zero_variance": 10,
+      "extreme_values": 0,
+      "small_batch": 0,
+      "high_variance": 0
+    },
+    "channel_analysis_summary": [
+      {
+        "channel_index": 4,
+        "channel_error": 0.0002147035556845367,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 7,
+        "channel_error": 0.00021343538537621498,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 2,
+        "channel_error": 0.0002134324167855084,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 3,
+        "channel_error": 0.0002132686786353588,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 24,
+        "channel_error": 0.00020594221132341772,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 28,
+        "channel_error": 0.00019818407599814236,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 8,
+        "channel_error": 0.0001964684051927179,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 0.5,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 23,
+        "channel_error": 0.00019537344633135945,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 17,
+        "channel_error": 0.00019457719463389367,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      },
+      {
+        "channel_index": 6,
+        "channel_error": 0.0001921140938065946,
+        "weight_error": 0.0,
+        "bias_error": 0.0,
+        "stats_instability_estimate": 5.0,
+        "numerical_features": {
+          "near_zero_variance": true,
+          "extreme_values": false,
+          "small_batch": false,
+          "high_variance": false,
+          "near_zero_mean": false,
+          "skewed_distribution": false
+        }
+      }
+    ]
+  }
+}

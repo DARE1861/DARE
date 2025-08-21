@@ -1,0 +1,41 @@
+nohup: ignoring input
+Using strategy: PrecisionStrategy(name='FP16_all', input_dtype=torch.float16, weight_dtype=torch.float16, compute_dtype=torch.float16, output_dtype=torch.float16)
+
+===== 批次 1/200 =====
+输入形状: torch.Size([32, 1024]), 权重形状: torch.Size([4096, 1024])
+Bias形状: torch.Size([4096])
+分布类型: adversarial_sum
+[worker 2] start. device_id=2, use_cuda=True, device=cuda:2
+[worker 2] finished: total_worker_time=0.8941s, generated 128 errors
+[worker 0] start. device_id=0, use_cuda=True, device=cuda:0
+[worker 0] finished: total_worker_time=0.8777s, generated 128 errors
+[worker 1] start. device_id=1, use_cuda=True, device=cuda:1
+[worker 1] finished: total_worker_time=0.9778s, generated 128 errors
+[worker 3] start. device_id=3, use_cuda=True, device=cuda:3
+[worker 3] finished: total_worker_time=0.9378s, generated 128 errors
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/precision-guard/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/anaconda3/envs/precision-guard/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/precision_estimation/examples/linear_precision_pipeline.py", line 170, in <module>
+    main()
+  File "/root/precision_estimation/examples/linear_precision_pipeline.py", line 69, in main
+    exceeded, actual_err, bound, oracle_result = detector.detect(x, w, b)
+  File "/root/anaconda3/envs/precision-guard/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/precision_estimation/core/detector/linear_error_detector.py", line 37, in detect
+    oracle_result: OracleResult = self.oracle.predict_error_bound(x, w, b)
+  File "/root/precision_estimation/core/oracle/linear_oracle_mc.py", line 273, in predict_error_bound
+    comp = self._estimate_components(x_cpu, w_cpu, b_cpu, num_samples=min(128, max(8, self.num_mc_samples // 8)))
+  File "/root/precision_estimation/core/oracle/linear_oracle_mc.py", line 310, in _estimate_components
+    "input_storage_error": run((True, False, False, False, False)),
+  File "/root/precision_estimation/core/oracle/linear_oracle_mc.py", line 304, in run
+    raise RuntimeError(f"Component worker error: {err_msg}")
+RuntimeError: Component worker error: RuntimeError('mat1 and mat2 must have the same dtype, but got Float and Half')
+Traceback (most recent call last):
+  File "/root/precision_estimation/core/oracle/linear_oracle_mc.py", line 167, in _worker_run
+    y_c = F.linear(x_c, w_c, b_c)
+RuntimeError: mat1 and mat2 must have the same dtype, but got Float and Half
+
+[worker 0] start. device_id=0, use_cuda=True, device=cuda:0

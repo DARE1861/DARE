@@ -1,0 +1,227 @@
+{
+  "detector": {
+    "detected_exceeded": false,
+    "actual_err": 5.5477023124694824e-05,
+    "predicted_bound": 0.0001806093379855156,
+    "elapsed_sec": 2.8781230449676514
+  },
+  "analyzer_report": {
+    "component_estimates": {
+      "input_storage_error": 5.5477023124694824e-05,
+      "matmul1_accumulation_error": 5.5477023124694824e-05,
+      "scaling_error": 5.5477023124694824e-05,
+      "softmax_numerical_error": 5.5477023124694824e-05,
+      "matmul2_accumulation_error": 5.5477023124694824e-05,
+      "output_demote_error": 9.106099605560303e-05
+    },
+    "component_ratios": {
+      "input_storage_error": 0.1505702499393351,
+      "matmul1_accumulation_error": 0.1505702499393351,
+      "scaling_error": 0.1505702499393351,
+      "softmax_numerical_error": 0.1505702499393351,
+      "matmul2_accumulation_error": 0.1505702499393351,
+      "output_demote_error": 0.24714875030332445
+    },
+    "primary_source": "storage_error",
+    "suggestion": "\u4e3b\u8981\u8bef\u5dee\u6765\u6e90\u4e3a\u8f93\u5165\u5b58\u50a8\u7cbe\u5ea6\u3002\u5efa\u8bae\uff1a\u63d0\u5347Q/K/V\u7684\u5b58\u50a8\u7cbe\u5ea6\uff1b\u8fdb\u884c\u8f93\u5165\u5f52\u4e00\u5316\uff1b\u68c0\u67e5embedding\u5c42\u7684\u8f93\u51fa\u8303\u56f4\u3002 \u68c0\u6d4b\u5230\u5927\u91cf\u5c16\u9510\u7684attention\u6a21\u5f0f\uff08\u4f4e\u71b5\uff09\uff0c\u8fd9\u4f1a\u653e\u5927softmax\u7684\u6570\u503c\u8bef\u5dee\u3002\u8003\u8651\u4f7f\u7528attention dropout\u6216\u6e29\u5ea6\u7f29\u653e\u3002",
+    "attention_pattern_stats": {
+      "global_avg_entropy": 3.878161668777466,
+      "global_sparsity": 0.6948471069335938,
+      "max_attention_weight": 1.0,
+      "min_attention_weight": 0.0
+    },
+    "attention_behavior_stats": {
+      "high_entropy_tokens": 0,
+      "low_entropy_tokens": 7,
+      "total_analyzed": 8
+    },
+    "top_tokens_summary": [
+      {
+        "batch_idx": 0,
+        "head_idx": 5,
+        "token_idx": 0,
+        "token_error": 1.0164330888073891e-05,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 2.056133780570235e-05,
+          "matmul1_error": 1.0081623652035915e-09,
+          "softmax_error": 6.219328497536481e-07,
+          "matmul2_error": 7.178068244684255e-07,
+          "demote_error": 6.219328497536481e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 4,
+        "token_idx": 1,
+        "token_error": 9.349064384878147e-06,
+        "entropy_ref": 0.6931259632110596,
+        "max_attention_weight_ref": 0.5032547116279602,
+        "attention_weight_error": 2.9802322387695312e-08,
+        "stage_errors": {
+          "storage_error": 1.8871759493777063e-05,
+          "matmul1_error": 7.745430095073916e-10,
+          "softmax_error": 4.924302629660815e-07,
+          "matmul2_error": 6.996160209382652e-07,
+          "demote_error": 4.924302629660815e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 1,
+        "token_idx": 1,
+        "token_error": 8.02133945398964e-06,
+        "entropy_ref": 0.6931206583976746,
+        "max_attention_weight_ref": 0.5036402940750122,
+        "attention_weight_error": 1.7881393432617188e-07,
+        "stage_errors": {
+          "storage_error": 2.0915845652780263e-05,
+          "matmul1_error": 1.0675149210036025e-09,
+          "softmax_error": 6.520895112771541e-07,
+          "matmul2_error": 7.160063432820607e-07,
+          "demote_error": 6.520895112771541e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 5,
+        "token_idx": 1,
+        "token_error": 7.551323506049812e-06,
+        "entropy_ref": 0.6931376457214355,
+        "max_attention_weight_ref": 0.5021822452545166,
+        "attention_weight_error": 4.172325134277344e-07,
+        "stage_errors": {
+          "storage_error": 1.966740637726616e-05,
+          "matmul1_error": 8.632547560333994e-10,
+          "softmax_error": 5.32539706910029e-07,
+          "matmul2_error": 7.178068244684255e-07,
+          "demote_error": 5.3253970691002906e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 4,
+        "token_idx": 0,
+        "token_error": 7.503662345698103e-06,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 2.090517864417052e-05,
+          "matmul1_error": 1.094379280099111e-09,
+          "softmax_error": 6.957721780054272e-07,
+          "matmul2_error": 6.996160209382652e-07,
+          "demote_error": 6.957721780054272e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 1,
+        "token_idx": 0,
+        "token_error": 7.469527190551162e-06,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 2.256315883641946e-05,
+          "matmul1_error": 1.3371913032623216e-09,
+          "softmax_error": 8.168208296410739e-07,
+          "matmul2_error": 7.160063432820607e-07,
+          "demote_error": 8.16820829641074e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 6,
+        "token_idx": 0,
+        "token_error": 6.9126326707191765e-06,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 2.1719537016906543e-05,
+          "matmul1_error": 1.2187169606192632e-09,
+          "softmax_error": 7.625611033290625e-07,
+          "matmul2_error": 7.030860615486745e-07,
+          "demote_error": 7.625611033290624e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 2,
+        "token_idx": 2,
+        "token_error": 6.851376383565366e-06,
+        "entropy_ref": 1.0986043214797974,
+        "max_attention_weight_ref": 0.334841787815094,
+        "attention_weight_error": 7.450580596923828e-07,
+        "stage_errors": {
+          "storage_error": 1.937375964189414e-05,
+          "matmul1_error": 8.603432568073696e-10,
+          "softmax_error": 5.406829586718232e-07,
+          "matmul2_error": 6.934683369763661e-07,
+          "demote_error": 5.4068295867182315e-08
+        }
+      }
+    ],
+    "head_analysis": [
+      {
+        "head_idx": 0,
+        "avg_error": 1.6916281992962467e-06,
+        "avg_entropy": 3.8781611919403076,
+        "avg_max_weight": 0.04289105162024498,
+        "sparsity": 0.695068359375
+      },
+      {
+        "head_idx": 1,
+        "avg_error": 1.7171835224871757e-06,
+        "avg_entropy": 3.8781614303588867,
+        "avg_max_weight": 0.042870763689279556,
+        "sparsity": 0.69488525390625
+      },
+      {
+        "head_idx": 2,
+        "avg_error": 1.7855463738669641e-06,
+        "avg_entropy": 3.878161907196045,
+        "avg_max_weight": 0.042865876108407974,
+        "sparsity": 0.694580078125
+      },
+      {
+        "head_idx": 3,
+        "avg_error": 1.694383854555781e-06,
+        "avg_entropy": 3.8781609535217285,
+        "avg_max_weight": 0.04288594797253609,
+        "sparsity": 0.695068359375
+      },
+      {
+        "head_idx": 4,
+        "avg_error": 2.1698301679862197e-06,
+        "avg_entropy": 3.878162145614624,
+        "avg_max_weight": 0.042868468910455704,
+        "sparsity": 0.69451904296875
+      },
+      {
+        "head_idx": 5,
+        "avg_error": 1.7280298152400064e-06,
+        "avg_entropy": 3.878161907196045,
+        "avg_max_weight": 0.042844273149967194,
+        "sparsity": 0.6949462890625
+      },
+      {
+        "head_idx": 6,
+        "avg_error": 1.9139217783958884e-06,
+        "avg_entropy": 3.8781614303588867,
+        "avg_max_weight": 0.04287166893482208,
+        "sparsity": 0.69482421875
+      },
+      {
+        "head_idx": 7,
+        "avg_error": 1.7863703760667704e-06,
+        "avg_entropy": 3.878161907196045,
+        "avg_max_weight": 0.04285363480448723,
+        "sparsity": 0.69488525390625
+      }
+    ]
+  }
+}

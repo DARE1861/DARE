@@ -1,0 +1,227 @@
+{
+  "detector": {
+    "detected_exceeded": false,
+    "actual_err": 4.556030035018921e-05,
+    "predicted_bound": 0.00010372138567618095,
+    "elapsed_sec": 2.981365919113159
+  },
+  "analyzer_report": {
+    "component_estimates": {
+      "input_storage_error": 5.2809715270996094e-05,
+      "matmul1_accumulation_error": 5.2809715270996094e-05,
+      "scaling_error": 5.2809715270996094e-05,
+      "softmax_numerical_error": 5.2809715270996094e-05,
+      "matmul2_accumulation_error": 5.2809715270996094e-05,
+      "output_demote_error": 7.243454456329346e-05
+    },
+    "component_ratios": {
+      "input_storage_error": 0.15694610513263363,
+      "matmul1_accumulation_error": 0.15694610513263363,
+      "scaling_error": 0.15694610513263363,
+      "softmax_numerical_error": 0.15694610513263363,
+      "matmul2_accumulation_error": 0.15694610513263363,
+      "output_demote_error": 0.21526947433683186
+    },
+    "primary_source": "storage_error",
+    "suggestion": "\u4e3b\u8981\u8bef\u5dee\u6765\u6e90\u4e3a\u8f93\u5165\u5b58\u50a8\u7cbe\u5ea6\u3002\u5efa\u8bae\uff1a\u63d0\u5347Q/K/V\u7684\u5b58\u50a8\u7cbe\u5ea6\uff1b\u8fdb\u884c\u8f93\u5165\u5f52\u4e00\u5316\uff1b\u68c0\u67e5embedding\u5c42\u7684\u8f93\u51fa\u8303\u56f4\u3002 \u68c0\u6d4b\u5230\u5927\u91cf\u5c16\u9510\u7684attention\u6a21\u5f0f\uff08\u4f4e\u71b5\uff09\uff0c\u8fd9\u4f1a\u653e\u5927softmax\u7684\u6570\u503c\u8bef\u5dee\u3002\u8003\u8651\u4f7f\u7528attention dropout\u6216\u6e29\u5ea6\u7f29\u653e\u3002",
+    "attention_pattern_stats": {
+      "global_avg_entropy": 3.8781614303588867,
+      "global_sparsity": 0.6948623657226562,
+      "max_attention_weight": 1.0,
+      "min_attention_weight": 0.0
+    },
+    "attention_behavior_stats": {
+      "high_entropy_tokens": 0,
+      "low_entropy_tokens": 7,
+      "total_analyzed": 8
+    },
+    "top_tokens_summary": [
+      {
+        "batch_idx": 0,
+        "head_idx": 0,
+        "token_idx": 0,
+        "token_error": 8.455141141894273e-06,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 2.343032110729837e-05,
+          "matmul1_error": 1.4790569125382611e-09,
+          "softmax_error": 9.386018064105884e-07,
+          "matmul2_error": 7.080146588123172e-07,
+          "demote_error": 9.386018064105883e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 4,
+        "token_idx": 0,
+        "token_error": 8.005365998542402e-06,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 1.9911155959562166e-05,
+          "matmul1_error": 9.141905038921929e-10,
+          "softmax_error": 5.793430318590254e-07,
+          "matmul2_error": 7.14398265699856e-07,
+          "demote_error": 5.793430318590254e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 3,
+        "token_idx": 1,
+        "token_error": 7.597867806907743e-06,
+        "entropy_ref": 0.6931308507919312,
+        "max_attention_weight_ref": 0.5028601288795471,
+        "attention_weight_error": 6.258487701416016e-07,
+        "stage_errors": {
+          "storage_error": 2.2529804482473992e-05,
+          "matmul1_error": 1.3446632057640364e-09,
+          "softmax_error": 8.515169611200691e-07,
+          "matmul2_error": 7.035762791929301e-07,
+          "demote_error": 8.51516961120069e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 7,
+        "token_idx": 0,
+        "token_error": 7.513997843489051e-06,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 2.179485227316036e-05,
+          "matmul1_error": 1.2515624056256033e-09,
+          "softmax_error": 7.845119398552924e-07,
+          "matmul2_error": 6.899264462845167e-07,
+          "demote_error": 7.845119398552924e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 7,
+        "token_idx": 1,
+        "token_error": 7.506874680984765e-06,
+        "entropy_ref": 0.6931231021881104,
+        "max_attention_weight_ref": 0.5034700036048889,
+        "attention_weight_error": 2.9802322387695312e-08,
+        "stage_errors": {
+          "storage_error": 2.2323041321214987e-05,
+          "matmul1_error": 1.3358264584748544e-09,
+          "softmax_error": 8.373308446607552e-07,
+          "matmul2_error": 6.899264462845167e-07,
+          "demote_error": 8.373308446607552e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 1,
+        "token_idx": 3,
+        "token_error": 7.483275112463161e-06,
+        "entropy_ref": 1.3862779140472412,
+        "max_attention_weight_ref": 0.25244587659835815,
+        "attention_weight_error": 6.407499313354492e-07,
+        "stage_errors": {
+          "storage_error": 2.1307406768755754e-05,
+          "matmul1_error": 1.137152993827342e-09,
+          "softmax_error": 6.991467671468854e-07,
+          "matmul2_error": 7.127815024432494e-07,
+          "demote_error": 6.991467671468854e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 5,
+        "token_idx": 0,
+        "token_error": 7.403413292195182e-06,
+        "entropy_ref": -0.0,
+        "max_attention_weight_ref": 1.0,
+        "attention_weight_error": 0.0,
+        "stage_errors": {
+          "storage_error": 2.112508855134365e-05,
+          "matmul1_error": 1.1360775128917535e-09,
+          "softmax_error": 7.070426363497973e-07,
+          "matmul2_error": 6.953533556952608e-07,
+          "demote_error": 7.070426363497973e-08
+        }
+      },
+      {
+        "batch_idx": 0,
+        "head_idx": 5,
+        "token_idx": 1,
+        "token_error": 7.361220923485234e-06,
+        "entropy_ref": 0.6930867433547974,
+        "max_attention_weight_ref": 0.5054970979690552,
+        "attention_weight_error": 7.152557373046875e-07,
+        "stage_errors": {
+          "storage_error": 2.0134481474087806e-05,
+          "matmul1_error": 9.76906570897102e-10,
+          "softmax_error": 6.079819286242128e-07,
+          "matmul2_error": 6.953533556952608e-07,
+          "demote_error": 6.079819286242128e-08
+        }
+      }
+    ],
+    "head_analysis": [
+      {
+        "head_idx": 0,
+        "avg_error": 1.7387952766512171e-06,
+        "avg_entropy": 3.8781614303588867,
+        "avg_max_weight": 0.04287547990679741,
+        "sparsity": 0.6949462890625
+      },
+      {
+        "head_idx": 1,
+        "avg_error": 2.1345069853850873e-06,
+        "avg_entropy": 3.8781611919403076,
+        "avg_max_weight": 0.0428767129778862,
+        "sparsity": 0.6947021484375
+      },
+      {
+        "head_idx": 2,
+        "avg_error": 1.7928030047187349e-06,
+        "avg_entropy": 3.8781611919403076,
+        "avg_max_weight": 0.042889758944511414,
+        "sparsity": 0.69482421875
+      },
+      {
+        "head_idx": 3,
+        "avg_error": 1.6306636325680302e-06,
+        "avg_entropy": 3.878161668777466,
+        "avg_max_weight": 0.04286808520555496,
+        "sparsity": 0.695068359375
+      },
+      {
+        "head_idx": 4,
+        "avg_error": 1.7787184560802416e-06,
+        "avg_entropy": 3.878162384033203,
+        "avg_max_weight": 0.04284830018877983,
+        "sparsity": 0.69482421875
+      },
+      {
+        "head_idx": 5,
+        "avg_error": 2.0004854377475567e-06,
+        "avg_entropy": 3.8781609535217285,
+        "avg_max_weight": 0.042899198830127716,
+        "sparsity": 0.69476318359375
+      },
+      {
+        "head_idx": 6,
+        "avg_error": 1.951162630575709e-06,
+        "avg_entropy": 3.8781609535217285,
+        "avg_max_weight": 0.042876821011304855,
+        "sparsity": 0.69482421875
+      },
+      {
+        "head_idx": 7,
+        "avg_error": 1.8098028249369236e-06,
+        "avg_entropy": 3.878161907196045,
+        "avg_max_weight": 0.042856182903051376,
+        "sparsity": 0.6949462890625
+      }
+    ]
+  }
+}
