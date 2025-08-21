@@ -46,8 +46,8 @@ precision_estimation/
 │   └── ... (others: relu, softmax, pooling, attention, etc.)
 │
 ├── evaluation/                   # Experimental evaluation framework
-│   ├── experiment/               # Scripts for automated experiments
-│   └── precision_evaluation_analyzer.py
+│   ├── experiment/               # Experiment results
+│   └── precision_evaluation_analyzer.py   # Scripts for automated experiments
 │
 ├── *.log                         # Logs of precision experiments
 ├── *.png / *.svg                 # Visualization plots from evaluation
